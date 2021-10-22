@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import msg, register
+from .views import helloworld, register
 
 urlpatterns = [
-    path('', msg,name ='message'),
-    path('9/', register, name='register'),        
+    path('', helloworld,name ='message'),
+    path('registrationform/', register, name='register'),        
 ]

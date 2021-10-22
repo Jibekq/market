@@ -1,13 +1,13 @@
 from django.shortcuts import render
 
-from .forms import Regform
+from .forms import  RegistrationForm
 
-def msg(request):
+def helloworld(request):
     return render(request, 'start.html')
 
 def register(request):
-    form = Regform(request.POST or None)
-    message = 'fill the blank'
+    form = RegistrationForm(request.POST or None)
+    message = 'Fill the blank'
     if request.method =='POST' and form.is_valid():
         message = 'Good'
         form.save()
